@@ -1,3 +1,14 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: Roboto, source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 #Document-top-container {
     text-align: center;
     background-color: #282c34;
@@ -36,16 +47,6 @@
     font-weight: 400 !important;
     text-transform: capitalize !important;
     color: white !important;
-}
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: Roboto, source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
