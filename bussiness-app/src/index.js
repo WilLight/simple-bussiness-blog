@@ -16,11 +16,8 @@ function DocTop() {
     return (
       <div id="Document-top-container">
         <img src={logo} id="Company-logo" alt="logo" />
-        <p id="Document-top-text">
-          Company Name
-        </p>
         <div className="Document-top-buttons">
-          <Link to = "/">
+          <Link to = "/" className="Button-link">
             <Button
   
               className="Document-top-button"
@@ -28,14 +25,14 @@ function DocTop() {
               Home
             </Button>
           </Link>
-          <Link to = "/newsfeed/">
+          <Link to = "/newsfeed/" className="Button-link">
             <Button
               className="Document-top-button"
             >
-              Gallery
+              Newsfeed
             </Button>
           </Link>
-          <Link to = "/contact/">
+          <Link to = "/contact/" className="Button-link">
             <Button
               className="Document-top-button"
             >
@@ -66,6 +63,8 @@ class Bussiness extends React.Component {
                     <Route path="/newsfeed/" component={Newsfeed} />
                     <Route path="/contact/" component={Contact} />
                 
+                </div>
+                <div id='footer'>
                 </div>
             </Router>
             </div>

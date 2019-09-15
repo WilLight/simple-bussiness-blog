@@ -3,6 +3,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 code {
@@ -11,13 +12,13 @@ code {
 
 #Document-top-container {
     text-align: center;
-    background-color: #282c34;
+    background-color: #e7e7e7;
     min-height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: calc(12px + 1vmin);
-    color: white;
+    color: #4b4d50;
 }
 
 #Company-logo {
@@ -25,26 +26,41 @@ code {
     pointer-events: none;
 }
 
-#Document-top-text {
-    margin-block-start: 5px;
-    margin-block-end: 5px;
-}
-
 .Document-top-buttons {
+    width: 50%;
     height: 100%;
     text-align: center;
-    background-color: #282c34;
+    background-color: #e7e7e7;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
+.Button-link {
+    text-decoration: none;
+}
+
 .Document-top-button {
-    height: 50px;
-    padding: 0 20px 0 20px !important;
+    width: 17vw;
+    height: 60px;
+    padding: 0px 40px 0px 40px !important;
     font-size: calc(12px + 1vmin) !important;
     font-weight: 400 !important;
     text-transform: capitalize !important;
-    color: white !important;
+    color: #4b4d50!important;
+}
+
+
+/* Footer */
+
+#footer {
+    text-align: center;
+    background-color: #e7e7e7;
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(6px + 1vmin);
+    color: #4b4d50;
 }

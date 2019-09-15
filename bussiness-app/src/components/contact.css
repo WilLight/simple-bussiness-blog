@@ -1,0 +1,85 @@
+#contact-panel {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #dadada;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+#contact-panel-greeting {
+    font-size: 40px;
+}
+
+#contact-information {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 4px;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 4px;
+    color: #0095ff;
+}
+
+#contact-form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form-grid {
+    display: grid;
+    grid-template-areas: "email number" "subject subject" "message message";
+}
+
+#email-address {
+    grid-area: email;
+}
+
+#email-address-input {
+    width: 20vw !important;
+}
+
+#phone-number {
+    grid-area: number;
+}
+
+#phone-number-input {
+    width: 20vw !important;
+}
+
+#subject {
+    grid-area: subject;
+}
+
+#subject-input {
+    width: 40vw !important;
+}
+
+#message {
+    grid-area: message;
+}
+
+#message-input {
+    width: 40vw !important;
+}
