@@ -75224,7 +75224,7 @@ class Contact extends _react.default.Component {
   }
 
   handleSubmit(event) {
-    alert(JSON.stringify(this.state));
+    console.log(this.state);
     event.preventDefault();
   }
 
@@ -75316,6 +75316,24 @@ function Newsfeed() {
 
 var _default = Newsfeed;
 exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/testing.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Newsfeed() {
+  return _react.default.createElement("h2", null, " About ");
+}
+
+var _default = Newsfeed;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"logo.svg":[function(require,module,exports) {
 module.exports = "/logo.86ce68ea.svg";
 },{}],"index.css":[function(require,module,exports) {
@@ -75339,6 +75357,8 @@ var _about = _interopRequireDefault(require("./components/about"));
 var _contact = _interopRequireDefault(require("./components/contact"));
 
 var _newsfeed = _interopRequireDefault(require("./components/newsfeed"));
+
+var _testing = _interopRequireDefault(require("./components/testing"));
 
 var _logo = _interopRequireDefault(require("./logo.svg"));
 
@@ -75371,7 +75391,12 @@ function DocTop() {
     className: "Button-link"
   }, _react.default.createElement(_core.Button, {
     className: "Document-top-button"
-  }, "Contact Us"))));
+  }, "Contact Us")), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/testing/",
+    className: "Button-link"
+  }, _react.default.createElement(_core.Button, {
+    className: "Document-top-button"
+  }, "Testing"))));
 }
 
 class Bussiness extends _react.default.Component {
@@ -75396,6 +75421,9 @@ class Bussiness extends _react.default.Component {
     }), _react.default.createElement(_reactRouterDom.Route, {
       path: "/contact/",
       component: _contact.default
+    }), _react.default.createElement(_reactRouterDom.Route, {
+      path: "/testing/",
+      component: _testing.default
     })), _react.default.createElement("div", {
       id: "footer"
     })));
@@ -75407,7 +75435,7 @@ _reactDom.default.render(_react.default.createElement(Bussiness, null), document
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 //serviceWorker.unregister();
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","@material-ui/core":"../node_modules/@material-ui/core/esm/index.js","./components/about":"components/about.js","./components/contact":"components/contact.js","./components/newsfeed":"components/newsfeed.js","./logo.svg":"logo.svg","./index.css":"index.css"}],"../../../../../Users/willi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","@material-ui/core":"../node_modules/@material-ui/core/esm/index.js","./components/about":"components/about.js","./components/contact":"components/contact.js","./components/newsfeed":"components/newsfeed.js","./components/testing":"components/testing.js","./logo.svg":"logo.svg","./index.css":"index.css"}],"../../../../../Users/willi/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -75435,7 +75463,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56505" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62808" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

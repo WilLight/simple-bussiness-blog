@@ -27,7 +27,7 @@ class Contact extends React.Component {
     }
   
     handleSubmit(event) {
-      alert(JSON.stringify(this.state));
+      console.log(this.state);
       event.preventDefault();
     }
 

@@ -6,6 +6,7 @@ import  { Button } from '@material-ui/core';
 import About from './components/about';
 import Contact from './components/contact';
 import Newsfeed from './components/newsfeed';
+import Testing from './components/testing';
 
 import logo from './logo.svg'
 import './index.css';
@@ -19,7 +20,6 @@ function DocTop() {
         <div className="Document-top-buttons">
           <Link to = "/" className="Button-link">
             <Button
-  
               className="Document-top-button"
             >
               Home
@@ -37,6 +37,13 @@ function DocTop() {
               className="Document-top-button"
             >
               Contact Us
+            </Button>
+          </Link>
+          <Link to = "/testing/" className="Button-link">
+            <Button
+              className="Document-top-button"
+            >
+              Testing
             </Button>
           </Link>
         </div>
@@ -62,6 +69,7 @@ class Bussiness extends React.Component {
                     <Route path="/" exact component={About} />
                     <Route path="/newsfeed/" component={Newsfeed} />
                     <Route path="/contact/" component={Contact} />
+                    <Route path="/testing/" component={Testing} />
                 
                 </div>
                 <div id='footer'>
