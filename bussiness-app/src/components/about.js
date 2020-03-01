@@ -3,8 +3,6 @@ import  { Button } from '@material-ui/core';
 
 import './about.css';
 
-import image1 from '../images/stock/image1.jpg';
-
 function About() {
     return (
         <div id="homepage-background">
@@ -21,7 +19,7 @@ function About() {
                     </Button>
                 </div>
                 <div id='homepage-panel1-edge'>
-                    <img src={image1} id='homepage-graphic'>
+                    <img src='#' id='homepage-graphic'>
                     </img>
                 </div>
             </div>

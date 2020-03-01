@@ -1,19 +1,74 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import  { Button } from '@material-ui/core';
+import firebase from 'firebase';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 import About from './components/about';
 import Contact from './components/contact';
 import Newsfeed from './components/newsfeed';
-import Testing from './components/testing';
+import SignUp from './components/signup';
 
-import logo from './logo.svg'
+import logo from './logo.svg';
 import './index.css';
+
 //import * as serviceWorker from './serviceWorker';
 
 
-function DocTop() {
+function DocTop(props) {
+  //Firebase
+  const config = {
+    apiKey: "AIzaSyBPeYMyccs8PXV7homyNy5EI8UtNWwFVtw",
+    authDomain: "akcent-energy.firebaseapp.com",
+    databaseURL: "https://akcent-energy.firebaseio.com",
+    projectId: "akcent-energy",
+    storageBucket: "akcent-energy.appspot.com",
+    appId: "1:554832520435:web:eff6d9fa41b33fff648386"
+  };
+  if(!firebase.apps.length){
+    firebase.initializeApp(config);
+  }
+
+  //Menu opening
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(prev => !prev);
+  };
+
+  const handleClickAway = () => {
+    setOpen(false);
+  };
+
+  //Field Value
+  const [userName, setUserName] = React.useState('');
+  const [email, emailLogin] = React.useState('');
+  const [password, passwordLogin] = React.useState('');
+
+  const handleLoginClick = () => {
+    const auth = firebase.auth();
+    //Sign in
+    const loginpromise = auth.signInWithEmailAndPassword(email,password);
+    loginpromise
+      .catch(e => console.log(e.message));
+  };
+  const handleLogoutClick = () => {
+    //Sign out
+    firebase.auth().signOut();
+    setUserName('');
+  }
+  //Realtime Listener
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+    if(firebaseUser) {
+      setUserName(firebaseUser.email);
+      console.log(firebaseUser);
+    } else {
+      console.log('user is not logged in');
+    }
+  });
+
     return (
       <div id="Document-top-container">
         <img src={logo} id="Company-logo" alt="logo" />
@@ -39,13 +94,67 @@ function DocTop() {
               Contact Us
             </Button>
           </Link>
-          <Link to = "/testing/" className="Button-link">
-            <Button
-              className="Document-top-button"
-            >
-              Testing
-            </Button>
-          </Link>
+          <ClickAwayListener onClickAway={handleClickAway}>
+            <div className="Menu-wrapper">
+              <Button
+                className="Document-top-button"
+                onClick={handleClick}
+              >
+                ...
+              </Button>
+              {open ? (
+                <div className="Menu-body">
+                  {userName ? (
+                    <div>
+                      <div>
+                        {userName}
+                      </div>
+                      <Button
+                        className="Menu-button"
+                        onClick={handleLogoutClick}
+                      >
+                        Log Out
+                      </Button>
+                    </div>
+                  ) : (
+                    <div>
+                      <TextField
+                        className="Menu-field"
+                        id="email-login"
+                        label="Email"
+                        value={email}
+                        onChange={(e) => emailLogin(e.target.value)}
+                        margin="normal"
+                      />
+                      <TextField
+                          className="Menu-field"
+                          id="password-login"
+                          label="Password"
+                          value={password}
+                          onChange={(e) => passwordLogin(e.target.value)}
+                          margin="normal"
+                      />
+                      <Button
+                        className="Menu-button"
+                        onClick={handleLoginClick}
+                      >
+                        Log In
+                      </Button>
+                      <Link to = "/testing/" className="Menu-button-link">
+                        <Button
+                          className="Menu-button"
+                        >
+                          Sign Up
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+                  
+                  
+                </div>
+              ) : null}
+            </div>
+          </ClickAwayListener>
         </div>
       </div>
     );
@@ -53,9 +162,11 @@ function DocTop() {
 
 
 class Bussiness extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
+    
+    
 
     render() {
         return(
@@ -69,12 +180,12 @@ class Bussiness extends React.Component {
                     <Route path="/" exact component={About} />
                     <Route path="/newsfeed/" component={Newsfeed} />
                     <Route path="/contact/" component={Contact} />
-                    <Route path="/testing/" component={Testing} />
+                    <Route path="/testing/" component={SignUp} />
                 
                 </div>
                 <div id='footer'>
                 </div>
-            </Router>
+            </Router> 
             </div>
         )
         

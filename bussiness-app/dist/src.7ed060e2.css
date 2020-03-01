@@ -1,0 +1,345 @@
+fieldset {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.homepage-header {
+    font-size: 40px;
+    margin: 30px;
+}
+
+.homepage-list-header {
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+.homepage-text {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.homepage-button {
+    color: #ffffff !important;
+    background-color: #0095ff !important;
+}
+
+#homepage-background {
+    background-color: #f0f0f0;
+}
+
+
+/* Panel 1 */
+
+#homepage-panel1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #dadada;
+    background-color: #f0f0f0;
+    color: #000000;
+    height: auto;
+}
+
+#homepage-panel1-edge {
+    width: 50%;
+    border-bottom-left-radius: 100%;
+    background-color: #1e1f20;
+}
+
+#homepage-graphic {
+    border-bottom-left-radius: 98%;
+    width: 96%;
+    min-width: 300px;
+    min-height: 300px;
+    height: auto;
+    margin-left: 4%;
+}
+
+#homepage-panel-text-box {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 150px;
+}
+
+
+/* Panel 2 */
+
+#homepage-panel2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #dadada;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dadada;
+    color: #4b4d50;
+}
+
+#homepage-panel2-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+#homepage-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-bottom: 120px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.homepage-list-selection {
+    text-align: center;
+    width: 28%;
+}
+
+
+/* Panel 3 */
+
+#homepage-panel3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    color: #4b4d50;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dadada;
+}
+
+#homepage-panel3-list-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#homepage-panel3-list-header {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+#homepage-panel3-list {
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.homepage-panel3-list-element {
+    margin-top: 5px;
+    list-style: none;
+}
+
+#homepage-panel3-edge {
+    width: 50%;
+    border-top-left-radius: 100%;
+    background-color: #1e1f20;
+}
+
+#homepage-panel3-graphic {
+    border-top-left-radius: 98%;
+    width: 96%;
+    min-width: 300px;
+    min-height: 300px;
+    height: auto;
+    margin-left: 4%;
+}
+#contact-panel {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #dadada;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+#contact-panel-greeting {
+    font-size: 40px;
+}
+
+#contact-information {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 4px;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 4px;
+    color: #0095ff;
+}
+
+#contact-form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form-grid {
+    display: grid;
+    grid-template-areas: "email number" "subject subject" "message message";
+}
+
+#email-address {
+    grid-area: email;
+}
+
+#email-address-input {
+    width: 20vw !important;
+}
+
+#phone-number {
+    grid-area: number;
+}
+
+#phone-number-input {
+    width: 20vw !important;
+}
+
+#subject {
+    grid-area: subject;
+}
+
+#subject-input {
+    width: 40vw !important;
+}
+
+#message {
+    grid-area: message;
+}
+
+#message-input {
+    width: 40vw !important;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: Roboto, source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#Document-top-container {
+    text-align: center;
+    background-color: #e7e7e7;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(12px + 1vmin);
+    color: #4b4d50;
+}
+
+#Company-logo {
+    height: 10vmin;
+    pointer-events: none;
+}
+
+.Document-top-buttons {
+    width: auto;
+    height: 100%;
+    text-align: center;
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space;
+}
+
+.Button-link {
+    text-decoration: none;
+}
+
+.Document-top-button {
+    width: auto;
+    height: 50px;
+    padding: 0px 20px 0px 20px !important;
+    font-size: calc(12px + 1vmin) !important;
+    font-weight: 400 !important;
+    text-transform: capitalize !important;
+    color: #4b4d50!important;
+}
+
+.Menu-body {
+    position: absolute;
+    top: 60px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+    border: solid;
+    border-width: 1px;
+    border-color: #dadada;
+    background-color: #e7e7e7;
+}
+
+.Menu-field {
+    margin: 0px 15px 0px 15px !important;
+}
+
+.Menu-button {
+    margin: 0px 15px 0px 15px !important;
+}
+
+
+/* Footer */
+
+#footer {
+    text-align: center;
+    background-color: #e7e7e7;
+    min-height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(6px + 1vmin);
+    color: #4b4d50;
+}
+
+/*# sourceMappingURL=/src.7ed060e2.css.map */
